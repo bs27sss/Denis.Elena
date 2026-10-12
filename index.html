@@ -122,7 +122,7 @@
 
     <section class="section colors">
       <h2>СВАДЕБНАЯ<br>ПАЛИТРА</h2>
-      <p>Если вам хочется поддержать стиль<br>нашего праздника, будем рады<br>видеть вас в оттенках нашей<br>свадебной палитры!</p>
+      <p>Если вам хочется поддержать стиль нашего праздника, будем рады видеть вас в оттенках нашей свадебной палитры!</p>
     </section>
 
     <!-- Контейнер свадебной палитры -->
@@ -159,15 +159,21 @@
               <label><input type="radio" name="alone" value="no"> Нет</label>
             </div>
           </div>
+          <div class="input-group">
+            <label>Сколько вас человек?</label>
+            <input type="number" name="guest_count" min="0" max="10" value="0" style="width: 100%; height: 36px; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 18px; padding: 4px 14px; outline: none; font-family: inherit;">
+          </div>
 
           <div class="input-group">
             <label>Предпочтения по алкоголю?</label>
             <input type="text">
           </div>
-
-          <div class="input-group">
-            <label>Нужен ли Вам трансфер туда и обратно?</label>
-            <input type="text">
+          
+           <div class="input-group">
+            <label>Прийдете или нет?🥹</label>
+           <div class="radio-group">
+              <label><input type="radio" name="alone" value="Да" checked> Да</label>
+              <label><input type="radio" name="alone" value="Нет"> Нет</label>
           </div>
           
           <button type="submit" class="submit-button">Отправить</button>

@@ -1,4 +1,4 @@
-- {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -49,7 +49,6 @@ body {
    СТИЛИ УЗОРОВ И УДАЛЕНИЕ ЧЕРНОГО ФОНА
 ========================================= */
 
-/* Нити жемчужин сверху и снизу в шапке */
 .pearl-top {
     position: absolute;
     top: 0;
@@ -57,7 +56,7 @@ body {
     width: 100%;
     z-index: 3;
     pointer-events: none;
-    mix-blend-mode: screen; /* Удаляет черный фон с картинки */
+    mix-blend-mode: screen;
 }
 
 .pearl-bottom {
@@ -71,23 +70,21 @@ body {
     mix-blend-mode: screen;
 }
 
-/* Кружевные полосы */
 .lace-banner {
     display: block;
     width: 100%;
     height: auto;
     margin: 10px 0;
-    mix-blend-mode: screen; /* Прозрачность черного фона */
+    mix-blend-mode: screen;
     opacity: 0.95;
 }
 
-/* Тонкие волнистые разделители-нити */
 .pearl-divider {
     display: block;
     width: 100%;
     height: auto;
     margin: 15px 0;
-    mix-blend-mode: screen; /* Прозрачность черного фона */
+    mix-blend-mode: screen;
     opacity: 0.9;
 }
 
@@ -229,7 +226,7 @@ body {
 }
 
 /* =========================================
-   АНКЕТА ГОСТЯ (ИЗМЕНЕНА НА БОРДОВЫЙ)
+   АНКЕТА ГОСТЯ (БОРДОВЫЙ ФОН)
 ========================================= */
 
 .form-section {
@@ -237,8 +234,8 @@ body {
 }
 
 .form-card {
-    background: #491A2C; /* Изменено с зеленого на бордовый фон */
-    border: 1px solid rgba(255, 255, 255, 0.15); /* Тонкая рамка для гармонии */
+    background: #3b1423; /* Насыщенный глубокий бордовый цвет карточки */
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 14px;
     padding: 22px 18px;
     color: #f4eeee;
@@ -371,7 +368,6 @@ body {
    ПАФОСНЫЕ ПЕРЕЛИВЫ И ПЛАВНЫЕ ПЕРЕХОДЫ
 ========================================= */
 
-/* 1. Эффект перламутрового перелива для заголовков и кнопок */
 .section h2, .button, .hero h1 {
     background: linear-gradient(
         120deg, 
@@ -389,7 +385,7 @@ body {
 }
 
 .button {
-    color: #491A2C !important; /* Для кнопки оставляем читаемый текст */
+    color: #491A2C !important;
     background: linear-gradient(135deg, #d4e3b5 0%, #ffffff 50%, #c8d8a9 100%);
     background-size: 200% 200%;
     transition: all 0.4s ease;
@@ -407,7 +403,6 @@ body {
     100% { background-position: 200% 0; }
 }
 
-/* 2. Плавные наплывы (Reveal) при прокрутке */
 .reveal-on-scroll {
     opacity: 0;
     transform: translateY(35px);
@@ -421,7 +416,6 @@ body {
     transform: translateY(0);
 }
 
-/* Эффект плавной пульсации для кружевных узоров */
 .lace-banner, .pearl-divider {
     transition: opacity 1.2s ease, transform 1.2s ease, filter 0.5s ease;
 }
@@ -431,18 +425,17 @@ body {
 }
 
 /* =========================================
-   ПАЛИТРА (ИСПРАВЛЕНИЕ ОВАЛОВ НА МОБИЛЬНЫХ)
+   ПАЛИТРА (УДАЛЕН ФОН-ПРЯМОУГОЛЬНИК И ФИКС ОВАЛОВ)
 ========================================= */
 
 .palette-container {
-  background-color: #3b1828; /* Темный фон */
-  padding: 30px;
+  background-color: transparent; /* Убран тёмный прямоугольник за кругами */
+  padding: 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px; /* Расстояние между кругами */
-  flex-wrap: wrap; /* Защита от переполнения на узких экранах */
-  border-radius: 8px;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .circle {
@@ -451,10 +444,10 @@ body {
   min-width: 50px;
   min-height: 50px;
   border-radius: 50%;
-  border: 2px solid #ffffff; /* Белая обводка */
+  border: 2px solid #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  aspect-ratio: 1 / 1; /* Гарантирует идеальный круг на любых телефонах */
-  flex-shrink: 0;      /* Запрещает сжимать круги в овалы */
+  flex-shrink: 0;        /* Запрещает сжимать круги в овалы */
+  aspect-ratio: 1 / 1;   /* Гарантирует идеальный круг на любых телефонах */
 }
 
 /* Цвета для каждого круга */

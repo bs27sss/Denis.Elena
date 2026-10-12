@@ -13,7 +13,7 @@
 </head>
 <body>
 <audio id="bg-music" loop style="display: none;" preload="auto">
-  <source src="Turning Page - Sleeping At Last.mp3" type="audio/mpeg">
+  <source src="Turning-Page-Sleeping-At-Last.mp3" type="audio/mpeg">
 </audio>
 
   <div class="page">
@@ -47,11 +47,11 @@
         <h3>Ресторан "Poiana Vadului"</h3>
         <p>мн. Штефан чел Маре 155,<br>г. Вадул-луй-Водэ</p>
       </div>
-     <a href="https://maps.app.goo.gl/dR9zFZdLgRGwgSMZ7" target="_blank" class="button">Открыть карту</a>
+      <a href="https://maps.app.goo.gl/dR9zFZdLgRGwgSMZ7" target="_blank" class="button">Открыть карту</a>
     </section>
 
     <!-- Кружево под блоком МЕСТО -->
-    <img src="lace.svg.jpg" alt="" class="lace-banner">
+    <img src="lace.svg" alt="" class="lace-banner">
 
     <!-- Программа -->
     <section class="section program">
@@ -255,7 +255,7 @@
         const alone = aloneRadio ? (aloneRadio.value === 'yes' ? 'Да' : 'Нет') : 'Не выбрано';
         
         const alcohol = inputs[1] ? inputs[1].value.trim() : 'Не указано';
-        const transfer = inputs[2] ? inputs[2].value.trim() : 'Не указано';
+        const transfer = inputs[2]ፔinputs[2].value.trim() : 'Не указано';
 
         // Формирование сообщения
         const message = `
@@ -353,12 +353,3 @@
     };
 
     document.addEventListener('scroll', startAudio);
-  });
-
-
-
-  </script>
-
-
-</body>
-</html>

@@ -255,7 +255,7 @@
         const alone = aloneRadio ? (aloneRadio.value === 'yes' ? 'Да' : 'Нет') : 'Не выбрано';
         
         const alcohol = inputs[1] ? inputs[1].value.trim() : 'Не указано';
-        const transfer = inputs[2]ፔinputs[2].value.trim() : 'Не указано';
+        const transfer = inputs[2] ? inputs[2].value.trim() : 'Не указано';
 
         // Формирование сообщения
         const message = `
@@ -353,3 +353,12 @@
     };
 
     document.addEventListener('scroll', startAudio);
+  });
+
+
+
+  </script>
+
+
+</body>
+</html>

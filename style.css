@@ -1,4 +1,4 @@
-* {
+- {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -229,7 +229,7 @@ body {
 }
 
 /* =========================================
-   АНКЕТА ГОСТЯ
+   АНКЕТА ГОСТЯ (ИЗМЕНЕНА НА БОРДОВЫЙ)
 ========================================= */
 
 .form-section {
@@ -237,16 +237,17 @@ body {
 }
 
 .form-card {
-    background: #c8d8a9;
+    background: #491A2C; /* Изменено с зеленого на бордовый фон */
+    border: 1px solid rgba(255, 255, 255, 0.15); /* Тонкая рамка для гармонии */
     border-radius: 14px;
     padding: 22px 18px;
-    color: #491A2C;
+    color: #f4eeee;
     text-align: left;
 }
 
 .form-card h2 {
     text-align: center;
-    color: #491A2C;
+    color: #ffffff;
     font-size: 28px;
     margin-bottom: 18px;
 }
@@ -260,13 +261,13 @@ body {
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 5px;
-    color: #491A2C;
+    color: #f4eeee;
 }
 
 .input-group input[type="text"] {
     width: 100%;
     height: 36px;
-    border: 1px solid #b2c293;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 18px;
     outline: none;
     background: #ffffff;
@@ -290,10 +291,11 @@ body {
     font-size: 14px;
     font-weight: normal;
     cursor: pointer;
+    color: #f4eeee;
 }
 
 .radio-group input {
-    accent-color: #491A2C;
+    accent-color: #c8d8a9;
     width: 16px;
     height: 16px;
 }
@@ -302,7 +304,7 @@ body {
     display: block;
     margin: 18px auto 0;
     border: none;
-    background: #ffffff;
+    background: #c8d8a9;
     color: #491A2C;
     padding: 8px 26px;
     border-radius: 18px;
@@ -311,12 +313,18 @@ body {
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
+    transition: background 0.2s;
+}
+
+.submit-button:hover {
+    background: #d8e8b9;
 }
 
 .confirmation {
     margin-top: 18px;
     font-size: 13px;
     line-height: 1.4;
+    color: #f4eeee;
     opacity: 0.95;
 }
 
@@ -358,6 +366,7 @@ body {
         box-shadow: 0 10px 25px rgba(0,0,0,0.5);
     }
 }
+
 /* =========================================
    ПАФОСНЫЕ ПЕРЕЛИВЫ И ПЛАВНЫЕ ПЕРЕХОДЫ
 ========================================= */
@@ -420,22 +429,32 @@ body {
 .lace-banner:hover, .pearl-divider:hover {
     filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
 }
+
+/* =========================================
+   ПАЛИТРА (ИСПРАВЛЕНИЕ ОВАЛОВ НА МОБИЛЬНЫХ)
+========================================= */
+
 .palette-container {
   background-color: #3b1828; /* Темный фон */
   padding: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px; /* Расстояние между кругами */
+  gap: 15px; /* Расстояние между кругами */
+  flex-wrap: wrap; /* Защита от переполнения на узких экранах */
   border-radius: 8px;
 }
 
 .circle {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
   border-radius: 50%;
   border: 2px solid #ffffff; /* Белая обводка */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  aspect-ratio: 1 / 1; /* Гарантирует идеальный круг на любых телефонах */
+  flex-shrink: 0;      /* Запрещает сжимать круги в овалы */
 }
 
 /* Цвета для каждого круга */
